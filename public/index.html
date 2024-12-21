@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="./style.css" rel="stylesheet">
+    <script src="birdscript.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Birds of Aotearoa</title>
+
+</head>
+
+<body>
+
+    <header class="flex-container flex-col">
+        <div class="header-background">
+            <h1 id=header-title class = "glow-text">Birds of Aotearoa</h1>
+            <img class = logo src="./data/bird.png" alt="Website Logo">
+        </div>
+    </header>
+    <main>
+        <aside class="menu flex-container flex-col">
+            <div class=filter-birds-container>
+                <h2>Filter Birds <span class = "birdCount"></span></h2>
+                
+                <p>Search</p>
+                <input type="text" id="filterSearch" name="search" placeholder="Search">
+                <div class=dropdown-form>
+                    <p>Conservation Status:</p>
+                    <form>
+                        <select class="filterStatus">
+                            <option>All</option>
+                            <option>Not Threatened</option>
+                            <option>Naturally Uncommon</option>
+                            <option>Relict</option>
+                            <option>Recovering</option>
+                            <option>Declining</option>
+                            <option>Nationally Increasing</option>
+                            <option>Nationally Vulnerable</option>
+                            <option>Nationally Endangered</option>
+                            <option>Nationally Critical</option>
+                            <option>Extinct</option>
+                            <option>Data Deficient</option>
+                        </select>
+                    </form>
+                    <p>Sort by:</p>
+                    <form>
+                        <select class = "filterSort">
+                            <option>None</option>
+                            <option>Ascending: Weight</option>
+                            <option>Descending: Weight</option>
+                            <option>Ascending: Length</option>
+                            <option>Descending: Length</option>
+                            <option>Ascending: English Name</option>
+                            <option>Descending: English Name</option>
+                            <option>Ascending: Maori Name</option>
+                            <option>Descending: Maori Name</option>
+                            <option>Ascending: Scientific Name</option>
+                            <option>Descending: Scientific Name</option>
+
+
+                          
+                        </select>
+                    </form>
+                    <button id = "filterButton" type="button">FILTER RESULTS</button>
+                </div>
+                <div class="conservation-status">
+                    <h3 class="status-title">Conservation Status</h3>
+                    <ul class="status-list">
+                        <li class="circle not-threatened"></li>
+                        <li class="status-text">Not Threatened</li>
+                      
+                        <li class="circle naturally-uncommon"></li>
+                        <li class="status-text">Naturally Uncommon</li>
+                      
+                        <li class="circle relict"></li>
+                        <li class="status-text">Relict</li>
+                      
+                        <li class="circle recovering"></li>
+                        <li class="status-text">Recovering</li>
+                      
+                        <li class="circle declining"></li>
+                        <li class="status-text">Declining</li>
+                      
+                        <li class="circle nationally-increasing"></li>
+                        <li class="status-text">Nationally Increasing</li>
+                      
+                        <li class="circle nationally-vulnerable"></li>
+                        <li class="status-text">Nationally Vulnerable</li>
+                      
+                        <li class="circle nationally-endangered"></li>
+                        <li class="status-text">Nationally Endangered</li>
+                      
+                        <li class="circle nationally-critical"></li>
+                        <li class="status-text">Nationally Critical</li>
+                      
+                        <li class="circle extinct"></li>
+                        <li class="status-text">Extinct</li>
+                      
+                        <li class="circle data-deficient"></li>
+                        <li class="status-text">Data Deficient</li>
+                      </ul>
+                    <p class="status-title">Conservation status from <a href="https://www.doc.govt.nz/nature/conservation-status/">DOC website</a></p>
+                </div>
+            </div>
+        </aside>
+
+        <div class="card-section flex-container flex-col">
+            <div class="card-grid-container flex-container">
+                <!--
+                <div class="card">
+                    <img src="./data/images/antipodes-island-parakeet-3.jpg" alt="Bird">
+                    <div class="status-circle not-threatened"></div>
+                    <h6>GOOFY ahh bird</h6>
+                    <p>Photo by wocky slush</p>
+                        <h3 class="title">Birdthing</h3>
+                        <table class="borderless-table">
+                            <tr>
+                                <td><b>Scientific Name</b> </td>
+                                <td> Porphyrio hochstetteri</td>
+                            </tr>
+                            <tr>
+                                <td><b>Family</b></td>
+                                <td>Rallidae</td>
+                            </tr>
+                            <tr>
+                                <td><b>Order</b></td>
+                                <td>Passeriformes</td>
+                            </tr>
+                            <tr>
+                                <td><b>Status</b></td>
+                                <td>Nationally Vulnerable</td>
+                            </tr>
+                            <tr>
+                                <td><b>Length</b></td>
+                                <td>18 cm</td>
+                            </tr>
+                            <tr>
+                                <td><b>Weight</b></td>
+                                <td>33g</td>
+                            </tr>
+                        </table>
+                </div>
+            -->
+                <!--
+                <div class="card">
+                    <img src="./data/images/antipodes-island-parakeet-3.jpg" alt="Bird">
+                    <div class="status-circle not-threatened"></div>
+                    <h6>GOOFY ahh bird</h6>
+                    <p>Photo by wocky slush</p>
+                        <h3 class="title">Birdthing</h3>
+                        <table class="borderless-table">
+                            <tr>
+                                <td><b>Scientific Name</b> </td>
+                                <td> Porphyrio hochstetteri</td>
+                            </tr>
+                            <tr>
+                                <td><b>Family</b></td>
+                                <td>Rallidae</td>
+                            </tr>
+                            <tr>
+                                <td><b>Order</b></td>
+                                <td>Passeriformes</td>
+                            </tr>
+                            <tr>
+                                <td><b>Status</b></td>
+                                <td>Nationally Vulnerable</td>
+                            </tr>
+                            <tr>
+                                <td><b>Length</b></td>
+                                <td>18 cm</td>
+                            </tr>
+                            <tr>
+                                <td><b>Weight</b></td>
+                                <td>33g</td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="item1">1</div>
+                <div class="item1">1</div>
+                <div class="item1">1</div>
+                <div class="item1">1</div>
+                <div class="item1">1</div>
+                <div class="item1">1</div> 
+            -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Data licensed from <a href = "https://birdsnz.org.nz/">Birds New Zealand</a> for educational use within the University of Otago</p>
+    </footer>
+</body>
+
+</html>
